@@ -157,8 +157,6 @@ describe('Create an order', () => {
         //Click blanket and handkerchiefs toggle button
         const blanketAndHandkerchiefsSwitch = await $(page.blanketAndHandkerchiefsSwitch);
         await blanketAndHandkerchiefsSwitch.click();
-        
-        await browser.pause(2000);
     })
 //Ordering 2 ice creams
     it('Should order 2 ice creams.', async () => {
@@ -172,9 +170,7 @@ describe('Create an order', () => {
         const iceCreamPlusCounter = await $(page.iceCreamPlusCounter);
         await iceCreamPlusCounter.click();
         await iceCreamPlusCounter.click();
-
-        await browser.pause(2000);
-
+        //Check value is correct
         const iceCreamPlusCounterValue = await $(page.iceCreamPlusCounterValue);
         await expect(iceCreamPlusCounterValue).toHaveText('2');
     })
