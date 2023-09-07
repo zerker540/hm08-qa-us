@@ -54,9 +54,9 @@ describe('Create an order', () => {
         //Clicking the order button
         const orderButton = await $(page.orderButton);
         await orderButton.click();
-        //Wait for order to process
-        await browser.pause(30000)
         //Check driver info has appeared
+        const theDriverWillArrive = await $(page.theDriverWillArrive);
+        await theDriverWillArrive.waitForExist({ timeout: 60000 });
         const orderHeaderTitle = await $(page.orderHeaderTitle);
         await expect(orderHeaderTitle).toHaveTextContaining('The driver will arrive');
     })

@@ -29,6 +29,7 @@ module.exports = {
     plc: '.plc',
     cardPaymentMethodIcon: 'img[alt="card"]',
     orderHeaderTitle: '.order-header-title',
+    theDriverWillArrive: '//div[contains(text(), "The driver will arrive")]',
     // Modals
     phoneNumberModal: '.modal',
     // Functions
