@@ -157,6 +157,7 @@ describe('Create an order', () => {
         //Click blanket and handkerchiefs toggle button
         const blanketAndHandkerchiefsSwitch = await $(page.blanketAndHandkerchiefsSwitch);
         await blanketAndHandkerchiefsSwitch.click();
+        await expect(blanketAndHandkerchiefsSwitch).toBeExisting();
     })
 //Ordering 2 ice creams
     it('Should order 2 ice creams.', async () => {
